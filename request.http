@@ -1,0 +1,154 @@
+//department KHOA
+POST http://localhost:6860/api/department/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6MiwiaWF0IjoxNjkyNzIzNTA2fQ.J84f6bcVJH2mooPeglypvrT8ME6q2vLbjB9o_kspw7g
+
+{
+    "name": "Điện tử",
+    "lead": 1
+}
+
+###
+POST http://localhost:6860/api/department/search
+Content-Type: application/json
+
+{
+    
+}
+
+
+###
+PUT http://localhost:6860/api/department/12
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6MiwiaWF0IjoxNjkyNzIzNTA2fQ.J84f6bcVJH2mooPeglypvrT8ME6q2vLbjB9o_kspw7g
+
+{
+    "name": "Công nghệ thông tin IT",
+    "lead": 1
+}
+
+
+###
+POST http://localhost:6860/api/department/delete
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6MiwiaWF0IjoxNjkyNzIzNTA2fQ.J84f6bcVJH2mooPeglypvrT8ME6q2vLbjB9o_kspw7g
+
+{
+    "ids": [13]
+}
+
+
+//major NGÀNH
+###
+POST http://localhost:6862/api/major/create
+Content-Type: application/json
+
+{
+    "name": "Hệ thống thông tin",
+    "idDepartment": "4"
+}
+
+###
+POST http://localhost:6862/api/major/search
+Content-Type: application/json
+
+# {
+#     "name": "thông "
+# }
+
+###
+PUT http://localhost:6862/api/major/2
+Content-Type: application/json
+
+{
+    "name": "Công nghệ thông tin update",
+    "idDepartment": 4
+}
+
+
+###
+POST http://localhost:6862/api/major/delete
+Content-Type: application/json
+
+{
+    "ids": [3,4]
+}
+
+
+
+//class Lớp
+###
+POST http://localhost:6861/api/class/create
+Content-Type: application/json
+
+{
+    "name": "KTPM03",
+    "idMajor": 1,
+    "quantity": 70,
+    "year": 2020,
+    "schoolYear": "K15"
+}
+
+###
+//node ./src/service/classes/index.js
+POST http://localhost:6861/api/class/search
+Content-Type: application/json
+
+{
+    "schoolYear": "15"
+}
+
+###
+PUT http://localhost:6861/api/class/2
+Content-Type: application/json
+
+{
+    "name": "Công nghệ thông tin update",
+    "idDepartment": 4
+}
+
+
+###
+POST http://localhost:6861/api/class/delete
+Content-Type: application/json
+
+{
+    "ids": [3,4]
+}
+
+
+//Môn học
+###
+POST http://localhost:6863/api/subject/create
+Content-Type: application/json
+
+{
+    "name": "Tiếng Anh Công nghệ thông tin 2",
+    "quantity": 5
+}
+
+###
+POST http://localhost:6863/api/subject/search
+Content-Type: application/json
+
+{
+    "deleted": 1
+}
+
+###
+PUT http://localhost:6863/api/subject/4
+Content-Type: application/json
+
+{
+    "name": "Nhập môn công nghệ phần mềm",
+    "quantity": 3
+}
+
+
+###
+POST http://localhost:6863/api/subject/delete
+Content-Type: application/json
+
+{
+    "ids": [4,5]
+}

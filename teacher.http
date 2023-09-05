@@ -1,0 +1,48 @@
+
+POST http://localhost:6865/api/teacher/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6MiwiaWF0IjoxNjkyODA3Nzc1fQ.hPPwOO13BWi1c6LxYsnPhRiiClQ8uS6BvUAoI9At0Og
+
+{
+    "code": "12020606600",
+    "password": "123456",
+    "level": 0,
+    "name": "Summmmmer",
+    "email": "Summmmmer@gmail.com",
+    "address": "Thái Nguyên",
+    "idCode": "40919060441",
+    "phone": "04384723535",
+    "avatar": "Summmmmer.img",
+    "birthday": "2002-12-23",
+    "status": 1
+}
+
+
+###
+PUT http://localhost:6865/api/teacher/2
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6MiwiaWF0IjoxNjkyODA3Nzc1fQ.hPPwOO13BWi1c6LxYsnPhRiiClQ8uS6BvUAoI9At0Og
+
+{
+    "password": "123456",
+    "level": 0,
+    "name": "Summmmmer UPdate",
+    "email": "Summmmmer@gmail.com",
+    "address": "Thái Nguyên",
+    "idCode": "091906044",
+    "phone": "02384723535",
+    "avatar": "Summmmmer.img",
+    "birthday": "2002-12-23",
+    "status": 1
+}
+
+
+###
+
+//id, code, level, name, email, phone, status
+POST http://localhost:6865/api/teacher/search
+Content-Type: application/json
+
+{
+      "id": "1"
+}

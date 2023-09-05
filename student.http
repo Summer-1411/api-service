@@ -1,0 +1,55 @@
+###
+	# account,	password, name,	email, nationality,	address, nation, phoneNumber, idCode, avatar, birthday,	idClass
+POST http://localhost:6864/api/student/create
+Content-Type: application/json
+
+{
+    "account": "2020606600",
+    "password": "123456",
+    "name": "Đào Thị Quỳnh Anh",
+    "email": "dqanh@gmail.com",
+    "nationality": "Việt Nam",
+    "address": "Thái Nguyên",
+    "nation": "Kinh",
+    "idCode": "091906044",
+    "phoneNumber": "02384723535",
+    "avatar": "dqa.img",
+    "birthday": "2002-12-23",
+    "idClass": "1"
+}
+
+###
+POST http://localhost:6864/api/student/search
+Content-Type: application/json
+
+{
+   
+}
+
+###
+PUT http://localhost:6864/api/student/4
+Content-Type: application/json
+
+{
+    "account": "2020606600",
+    "password": "123456",
+    "name": "UPDATE duplicate false",
+    "email": "dqanh@gmail.com",
+    "nationality": "Việt Nam",
+    "address": "Thái Nguyên",
+    "nation": "Kinh",
+    "idCode": "091906044",
+    "phoneNumber": "02384723535",
+    "avatar": "dqa.img",
+    "birthday": "2002-12-23",
+    "idClass": "1"
+}
+
+
+###
+POST http://localhost:6864/api/student/delete
+Content-Type: application/json
+
+{
+    "ids": [4,5]
+}
